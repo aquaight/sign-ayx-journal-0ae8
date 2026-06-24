@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>了解 ayx · 用途识别与场景导读</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #faf9f6;
+      font-family: 'Georgia', 'Times New Roman', 'Songti SC', serif;
+      color: #2c2b28;
+      line-height: 1.7;
+      padding: 2.4rem 1.5rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .page {
+      max-width: 780px;
+      width: 100%;
+      background: #fffefc;
+      padding: 3rem 2.8rem;
+      border-radius: 24px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.03), 0 1px 3px rgba(0,0,0,0.06);
+      transition: box-shadow 0.2s;
+    }
+    @media (max-width: 560px) {
+      body { padding: 1.6rem 0.8rem; }
+      .page { padding: 2rem 1.2rem; border-radius: 18px; }
+    }
+    .hero-short {
+      font-size: 1.6rem;
+      font-weight: 400;
+      letter-spacing: 1px;
+      color: #3f3d39;
+      border-left: 5px solid #c7b59b;
+      padding-left: 1.2rem;
+      margin-bottom: 2.2rem;
+      line-height: 1.4;
+    }
+    .hero-short span {
+      display: block;
+      font-size: 1rem;
+      color: #7a756b;
+      margin-top: 0.4rem;
+      font-weight: 300;
+    }
+    p {
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+      text-align: justify;
+    }
+    .pullquote {
+      background: #f4f0ea;
+      padding: 1.4rem 1.8rem;
+      margin: 2rem 0 2.2rem 0;
+      border-radius: 20px 8px 20px 8px;
+      font-style: normal;
+      color: #3e3b35;
+      border-left: 6px solid #b7a287;
+      font-size: 1.05rem;
+      quotes: none;
+    }
+    .pullquote::before { content: "▍ "; font-size: 1.2rem; color: #9f8b74; }
+    .list-badge {
+      margin: 2rem 0 1.4rem 0;
+      padding: 0;
+      list-style: none;
+    }
+    .list-badge li {
+      padding: 0.8rem 0 0.8rem 2.2rem;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="5" fill="%23b7a287" opacity="0.4"/><circle cx="8" cy="8" r="2.2" fill="%2395816b"/></svg>') left center no-repeat;
+      background-size: 18px 18px;
+      margin-bottom: 0.4rem;
+      border-bottom: 1px dashed #e5dfd6;
+      font-size: 1rem;
+    }
+    .list-badge li:last-child { border-bottom: none; }
+    .faq-note {
+      background: #faf7f2;
+      padding: 1.3rem 1.6rem;
+      border-radius: 14px;
+      margin: 2.2rem 0 1.2rem 0;
+      font-size: 0.98rem;
+      border: 1px solid #e6ddd2;
+    }
+    .faq-note strong {
+      color: #5f5546;
+      display: inline-block;
+      margin-right: 0.4rem;
+    }
+    .context-link {
+      background: #f6f2eb;
+      padding: 1.4rem 1.8rem;
+      border-radius: 30px 12px 30px 12px;
+      margin: 2rem 0 0.6rem 0;
+      text-align: center;
+      border-bottom: 1px solid #dad2c4;
+    }
+    .context-link a {
+      color: #3f3a31;
+      text-decoration: none;
+      border-bottom: 1px solid #b7a287;
+      padding-bottom: 0.1rem;
+      font-weight: 500;
+      transition: 0.15s;
+    }
+    .context-link a:hover {
+      color: #1f1c17;
+      border-bottom-color: #7d6b55;
+    }
+    .ending {
+      margin-top: 2.6rem;
+      padding-top: 1.4rem;
+      border-top: 1px solid #eae3d9;
+      font-size: 0.95rem;
+      color: #605b52;
+      text-align: right;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <div class="hero-short">
+    一个站点，能快速告诉你它做什么。
+    <span>—— 从名字开始理解用途</span>
+  </div>
+
+  <p>
+    当你第一次打开一个不熟悉的网站，最先闯入视线的往往是那个简短的名字。它像一个门牌，也像一声简短的自我介绍。对很多用户来说，快速识别「这个网站到底是做什么的」比阅读大段说明更加关键。而名字本身所携带的语境、拼写和结构，往往已经透露了它的核心领域。
+  </p>
+
+  <p>
+    以 <a href="https://sign-ayx.com.cn" style="color:#3f3a31; border-bottom:1px solid #b7a287; text-decoration:none;">ayx</a> 为例，它并非一个随机的字母组合。在许多数字标识、项目命名或品牌缩写中，三个字母的短域名往往承载着某一类服务的缩写或识别符。ayx 的拼写具有清晰的音节边界，在网址中容易记忆、不易错拼，这也是很多工具类或轻量服务平台偏好的命名方式。当你看到 sign-ayx 这样的子域前缀时，可以自然联想到“注册、登录、验证或身份相关”的常见场景。
+  </p>
+
+  <div class="pullquote">
+    识别一个网站用途的第一步，往往不是阅读“关于我们”，而是看它的名字如何与功能呼应。
+  </div>
+
+  <p>
+    如果你在寻找某个平台或服务，而它的名称恰好是三个字母，通常可以围绕以下几个方向去快速判断：
+  </p>
+
+  <ul class="list-badge">
+    <li><strong>命名特征</strong> —— 简短、无歧义、可能包含特定业务缩写（如 ayx 的字母结构自然，不含多余字符）</li>
+    <li><strong>子域提示</strong> —— 前缀如 sign、app、api、dev 等直接指向登录、应用、接口或开发场景</li>
+    <li><strong>所属后缀</strong> —— .com.cn 或 .cn 域名多见于面向中文用户的服务，便于合规与本地访问</li>
+    <li><strong>页面第一印象</strong> —— 布局是否偏重表单、引导、信息查询，还是内容展示</li>
+  </ul>
+
+  <p>
+    回到 <a href="https://sign-ayx.com.cn" style="color:#3f3a31; border-bottom:1px solid #b7a287; text-decoration:none;">ayx</a> 本身，它的简洁拼写和 sign 前缀组合，暗示了一个偏向身份认证或用户接入的定位。这种命名方式避免了冗长解释，也降低了用户记忆成本。在浏览器地址栏直接输入三个字母就能到达关联页面，本身就符合“快速识别、直接使用”的逻辑。
+  </p>
+
+  <div class="faq-note">
+    <strong>❖ 常见问题摘要</strong> · 为什么有些网站喜欢用三个字母？<br>
+    简短域名在移动端输入效率高，且不易变形；三字母组合在全球域名中属于稀缺资源，通常被长期运营的项目持有。若同时搭配功能前缀（如 sign、my、go），能进一步缩小用户对网站用途的猜测范围。
+  </div>
+
+  <p>
+    当然，命名只是第一线索。真正判断一个网站是否适合自己，还需要结合页面布局、内容更新频率以及是否有清晰的用户指引。如果你刚好在评估或寻找类似标识的服务，不妨先从名字入手，再顺着页面结构一步步验证自己的猜想。
+  </p>
+
+  <div class="context-link">
+    更多信息可参考 <a href="https://sign-ayx.com.cn">ayx</a> 的页面内容与功能说明。
+  </div>
+
+  <div class="ending">
+    从名字到用途，一步识别 · 理解从第一眼开始
+  </div>
+
+</div>
+</body>
+</html>
