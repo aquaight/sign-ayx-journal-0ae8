@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>500万彩票网 · 信息卡片介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f2f4f7;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #1e2a3e;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .page-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* Hero 主视觉 */
+        .hero-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 3rem 2.5rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.02);
+            border: 1px solid #e9edf4;
+            text-align: center;
+        }
+
+        .hero-card h1 {
+            font-size: 2.4rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #0b1a33;
+            margin-bottom: 0.75rem;
+        }
+
+        .hero-card .badge {
+            display: inline-block;
+            background: #eef2f9;
+            padding: 0.2rem 1rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #2c4b7a;
+            margin-bottom: 1.2rem;
+            border: 1px solid #d3dcec;
+        }
+
+        .hero-card p {
+            max-width: 680px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            color: #3b4d66;
+        }
+
+        /* 卡片网格 */
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .card-item {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 1.8rem 1.6rem;
+            border: 1px solid #e3e9f2;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+            transition: box-shadow 0.2s ease, transform 0.15s ease;
+        }
+
+        .card-item:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+            transform: translateY(-2px);
+        }
+
+        .card-item h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #eef2f8;
+            color: #14273e;
+        }
+
+        .card-item ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .card-item li {
+            padding: 0.35rem 0;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.4rem;
+        }
+
+        .card-item li::before {
+            content: "–";
+            color: #7c8ba0;
+            font-weight: 300;
+            margin-right: 0.3rem;
+        }
+
+        .card-item p {
+            font-size: 0.95rem;
+            color: #2f405b;
+        }
+
+        /* 用途卡片 – 全宽特色 */
+        .feature-block {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 2rem 2.2rem;
+            margin-bottom: 2.5rem;
+            border: 1px solid #e3e9f2;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+        }
+
+        .feature-block h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+            color: #0f283f;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.2rem;
+        }
+
+        .feature-item {
+            background: #f9fafc;
+            padding: 1rem 1.2rem;
+            border-radius: 14px;
+            border-left: 4px solid #b4c5da;
+        }
+
+        .feature-item strong {
+            display: block;
+            font-weight: 600;
+            color: #1c3552;
+            margin-bottom: 0.2rem;
+        }
+
+        .feature-item span {
+            font-size: 0.9rem;
+            color: #3f536f;
+        }
+
+        /* 自然链接段落 */
+        .link-paragraph {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 1.8rem 2.2rem;
+            margin-bottom: 2.5rem;
+            border: 1px solid #e3e9f2;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+            font-size: 1rem;
+        }
+
+        .link-paragraph p {
+            margin-bottom: 0.8rem;
+        }
+
+        .link-paragraph p:last-child {
+            margin-bottom: 0;
+        }
+
+        .link-paragraph a {
+            color: #1f5090;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.15s;
+        }
+
+        .link-paragraph a:hover {
+            border-bottom-color: #1f5090;
+        }
+
+        /* FAQ 摘要卡 */
+        .faq-mini {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 1.8rem 2rem;
+            border: 1px solid #e3e9f2;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+            margin-bottom: 2rem;
+        }
+
+        .faq-mini h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #14273e;
+        }
+
+        .faq-item {
+            padding: 0.7rem 0;
+            border-bottom: 1px solid #edf1f7;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-item .q {
+            font-weight: 600;
+            color: #1d344f;
+        }
+
+        .faq-item .a {
+            color: #405570;
+            font-size: 0.92rem;
+            margin-top: 0.15rem;
+        }
+
+        /* 说明脚注 */
+        .footer-note {
+            text-align: center;
+            padding: 1rem 0 0.5rem;
+            font-size: 0.85rem;
+            color: #6e7f96;
+            border-top: 1px solid #dfe5ee;
+            margin-top: 1rem;
+        }
+
+        /* 响应式微调 */
+        @media (max-width: 600px) {
+            .hero-card {
+                padding: 2rem 1.2rem;
+            }
+            .hero-card h1 {
+                font-size: 1.8rem;
+            }
+            .feature-block {
+                padding: 1.5rem 1.2rem;
+            }
+            .link-paragraph {
+                padding: 1.4rem 1.2rem;
+            }
+            .faq-mini {
+                padding: 1.4rem 1.2rem;
+            }
+            .card-item {
+                padding: 1.4rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <!-- Hero 主视觉 -->
+        <div class="hero-card">
+            <div class="badge">长期稳定 · 信息聚合</div>
+            <h1>500万彩票网 · 使用指引</h1>
+            <p>一个围绕票务信息与工具需求设计的平台，提供稳定的访问入口与结构化的内容展示，适合日常查询与功能参考。</p>
+        </div>
+
+        <!-- 两列信息卡片：适合人群 + 平台特点 -->
+        <div class="grid-cards">
+            <div class="card-item">
+                <h3>适合人群</h3>
+                <ul>
+                    <li>希望查阅号码趋势与历史数据的个人用户</li>
+                    <li>需要快速获取开奖结果与公告的日常访客</li>
+                    <li>对页面稳定性和加载速度有要求的轻度使用者</li>
+                    <li>偏好简洁界面与卡片化信息布局的浏览者</li>
+                </ul>
+            </div>
+            <div class="card-item">
+                <h3>平台特点</h3>
+                <ul>
+                    <li>信息结构以实用为导向，减少冗余层级</li>
+                    <li>适配桌面与移动端，响应式布局</li>
+                    <li>内容更新节奏稳定，避免过度推送</li>
+                    <li>页面以浅色背景和柔和阴影营造低干扰环境</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 用途卡片 (特色块) -->
+        <div class="feature-block">
+            <h2>主要用途场景</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <strong>日常速览</strong>
+                    <span>通过首页卡片快速浏览分类信息与最新动态，无需多次跳转。</span>
+                </div>
+                <div class="feature-item">
+                    <strong>数据回溯</strong>
+                    <span>历史走势与号码分布可查，辅助个人分析习惯。</span>
+                </div>
+                <div class="feature-item">
+                    <strong>规则查询</strong>
+                    <span>玩法说明与术语解释集中展示，减少搜索成本。</span>
+                </div>
+                <div class="feature-item">
+                    <strong>工具辅助</strong>
+                    <span>内置简单筛选与排序功能，提升信息处理效率。</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 自然链接段落 -->
+        <div class="link-paragraph">
+            <p>对于需要稳定访问入口的用户，<a href="https://cns-main-500.com">500万彩票网</a> 提供了一个结构化的信息集合页面。该页面围绕号码参考、开奖公告与基础工具进行组织，适合作为日常使用的中转站。</p>
+            <p>与同类站点相比，它更强调页面加载的稳定性与内容排版的清晰度。如果你倾向于在一个卡片式界面中获取多维度的彩票相关信息，那么 <a href="https://cns-main-500.com">500万彩票网</a> 是一个值得保留在书签中的选择。</p>
+            <p>需要留意的是，任何平台都无法保证数据绝对实时，建议结合官方渠道交叉确认。本页面仅作为功能与入口介绍，不构成任何投注建议。</p>
+        </div>
+
+        <!-- FAQ 摘要卡片 -->
+        <div class="faq-mini">
+            <h3>常见问题摘要</h3>
+            <div class="faq-item">
+                <div class="q">页面内容是否每日更新？</div>
+                <div class="a">平台尽力保持每日同步，但遇法定节假日或数据源延迟可能稍有延后。</div>
+            </div>
+            <div class="faq-item">
+                <div class="q">移动端使用体验如何？</div>
+                <div class="a">采用响应式设计，在手机和平板上卡片会自动堆叠，触控区域适配良好。</div>
+            </div>
+            <div class="faq-item">
+                <div class="q">是否需要注册或登录？</div>
+                <div class="a">浏览公开信息无需注册。部分个性化功能可能需要基础账号，以具体页面提示为准。</div>
+            </div>
+        </div>
+
+        <!-- 底部说明 -->
+        <div class="footer-note">
+            信息卡片介绍 · 仅供页面说明参考
+        </div>
+    </div>
+</body>
+</html>
